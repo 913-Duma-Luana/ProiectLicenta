@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "917629970605",
+    "project_id": "proiectlicentaluana1",
+    "storage_bucket": "proiectlicentaluana1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917629970605:android:25acd1de35f856c1927e24",
+        "android_client_info": {
+          "package_name": "com.example.project_luana_v1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917629970605-b0nfia0hcr9pel053c0l4rhhe1jo63qt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCasfdfuucSc2BkNE_kZ13PUcUvepjS3VU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917629970605-b0nfia0hcr9pel053c0l4rhhe1jo63qt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>917629970605-t9uk7qegt7ckriombnc9ma7hbhii1tdl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.917629970605-t9uk7qegt7ckriombnc9ma7hbhii1tdl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBNCl9pBW1j1hisOeUTZt7p7_QZqSbOBdU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>917629970605</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.projectLuanaV1</string>
+	<key>PROJECT_ID</key>
+	<string>proiectlicentaluana1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>proiectlicentaluana1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:917629970605:ios:449ac1c3576fe288927e24</string>
+</dict>
+</plist>
