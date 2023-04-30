@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:level_map/level_map.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:project_luana_v1/pages/settings_page.dart';
+
+import 'learning-material.dart';
 
 class CustomLevelMapPage extends StatefulWidget {
   @override
@@ -35,8 +38,27 @@ class _CustomLevelMapPageState extends State<CustomLevelMapPage> {
       child: Scaffold(
         backgroundColor: const Color.fromRGBO(241, 226, 173, 1),
         appBar: AppBar(
-          title: Text('Level Map'),
-          backgroundColor: const Color.fromRGBO(193, 181, 138, 1),
+          title: Text('Level Map',
+              style: TextStyle(
+                  color: Colors.grey[800],
+                  fontWeight: FontWeight.bold
+              )
+          ),
+          backgroundColor: Color.fromRGBO(193, 181, 138, 1),
+          actions: [
+            IconButton(
+              icon: Icon(
+                Icons.settings,
+                color: Colors.grey[800],
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SettingsPage()),
+                );
+              },
+            ),
+          ],
         ),
         body: userLevel != null
             ? LevelMap(
@@ -96,15 +118,16 @@ class _CustomLevelMapPageState extends State<CustomLevelMapPage> {
         )
             : CircularProgressIndicator(),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: const Color.fromRGBO(193, 181, 138, 1),
+          backgroundColor: Color.fromRGBO(193, 181, 138, 1),
           child: Icon(
-            Icons.bolt,
-            color: Colors.white,
+            Icons.list,
+            color: Colors.grey[800],
           ),
           onPressed: () {
-            setState(() {
-              // Just to visually see the change of path's curve.
-            });
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LearningMaterialPage()),
+            );
           },
         ),
       ),
