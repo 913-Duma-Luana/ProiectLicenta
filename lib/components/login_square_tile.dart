@@ -14,11 +14,11 @@ class LoginSquareTile extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.white),
+          border: Border.all(color: const Color.fromRGBO(217, 203, 156, 1)),
           borderRadius: BorderRadius.circular(16),
-          color: Colors.grey[200],
+          color: const Color.fromRGBO(251, 246, 230, 1),
         ),
         child: Image.asset(
             imagePath,

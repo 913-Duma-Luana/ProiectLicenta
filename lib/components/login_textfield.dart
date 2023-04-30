@@ -21,12 +21,12 @@ class LoginTextField extends StatelessWidget {
         obscureText: obscureText,
         decoration: InputDecoration(
           enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.white),
+            borderSide: BorderSide(color: Color.fromRGBO(217, 203, 156, 1)),
           ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey.shade400),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: Color.fromRGBO(193, 181, 138, 1)),
           ),
-          fillColor: Colors.grey.shade200,
+          fillColor: const Color.fromRGBO(251, 246, 230, 1),
           filled: true,
           hintText: hintText,
           hintStyle: TextStyle(color: Colors.grey[500])

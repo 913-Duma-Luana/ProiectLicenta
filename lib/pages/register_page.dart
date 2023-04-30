@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project_luana_v1/components/login_square_tile.dart';
@@ -30,11 +31,15 @@ class _RegisterPageState extends State<RegisterPage> {
     try{
       if (passwordController.text == confirmPasswordController.text){
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
-          email: emailController.text,
+          email: emailController.text.trim(),
           password: passwordController.text,
         );
-        // Eliminate the loading progress circle
         Navigator.pop(context);
+        await FirebaseFirestore.instance.collection('users').add({
+          'email': emailController.text.trim(),
+          'level': 0
+        });
+        // Eliminate the loading progress circle
       } else {
         // Eliminate the loading progress circle
         Navigator.pop(context);
@@ -94,7 +99,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: const Color.fromRGBO(241, 226, 173, 1),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
