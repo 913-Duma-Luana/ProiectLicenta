@@ -2,6 +2,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:project_luana_v1/level_map_package/src/model/image_params.dart';
 
+
 class LevelMapParams {
   static final _random = math.Random();
   final int levelCount;

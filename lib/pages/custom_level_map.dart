@@ -36,19 +36,16 @@ class _CustomLevelMapPageState extends State<CustomLevelMapPage> {
   Future<void> _openFirstQuestionOfLevel(int level) async {
     final questionsSnapshot = await FirebaseFirestore.instance
         .collection('questions')
-        .where('level', isEqualTo: level)
-        .orderBy('id')
+        .where('level', isEqualTo: level+1)
         .limit(1)
         .get();
 
     if (questionsSnapshot.docs.isNotEmpty) {
-      final firstQuestion = questionsSnapshot.docs.first.data();
-      final questionId = firstQuestion['id'];
-
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => QuizQuestionPage(questionId: questionId),
+          builder: (context) =>
+              QuizQuestionPage(levelId: level + 1, questionId: 1),
         ),
       );
     }
@@ -81,30 +78,23 @@ class _CustomLevelMapPageState extends State<CustomLevelMapPage> {
         ),
         body: userLevel != null
             ? LevelMap(
+                onTapDown: (int level) {
+                  _openFirstQuestionOfLevel(level);
+                },
                 backgroundColor: const Color.fromRGBO(241, 226, 173, 1),
                 levelMapParams: LevelMapParams(
                   levelCount: 4,
                   currentLevel: userLevel.toDouble(),
                   pathColor: Colors.grey.shade700,
                   currentLevelImage: ImageParams(
-                    onTap: (int level) {
-                      print('Tapped level $userLevel');
-                    },
-                    isTappableLevel: true,
                     path: "lib/images/map-images/current_black.png",
                     size: Size(40, 47),
                   ),
                   lockedLevelImage: ImageParams(
-                    onTap: (int level) {
-                      print('Tapped level > $userLevel => locked');
-                    },
                     path: "lib/images/map-images/locked_black.png",
                     size: Size(40, 42),
                   ),
                   completedLevelImage: ImageParams(
-                    onTap: (int level) {
-                      print('Tapped level < $userLevel => completed');
-                    },
                     path: "lib/images/map-images/completed_black.png",
                     size: Size(40, 42),
                   ),
@@ -149,7 +139,7 @@ class _CustomLevelMapPageState extends State<CustomLevelMapPage> {
         floatingActionButton: FloatingActionButton(
           backgroundColor: Color.fromRGBO(193, 181, 138, 1),
           child: Icon(
-            Icons.list,
+            Icons.menu_book,
             color: Colors.grey[800],
           ),
           onPressed: () {

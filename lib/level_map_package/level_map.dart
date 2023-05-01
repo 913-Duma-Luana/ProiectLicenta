@@ -1,6 +1,6 @@
 library level_map;
 
-export 'src/enum/image_side_enum.dart';
-export 'src/level_map.dart';
-export 'src/model/image_params.dart';
-export 'src/model/level_map_params.dart';
+export 'package:project_luana_v1/level_map_package/src/enum/image_side_enum.dart';
+export 'package:project_luana_v1/level_map_package/src/level_map.dart';
+export 'package:project_luana_v1/level_map_package/src/model/image_params.dart';
+export 'package:project_luana_v1/level_map_package/src/model/level_map_params.dart';

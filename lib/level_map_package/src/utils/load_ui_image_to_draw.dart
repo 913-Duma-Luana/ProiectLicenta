@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:project_luana_v1/level_map_package/src/enum/image_side_enum.dart';
 import 'package:project_luana_v1/level_map_package/src/model/bg_image.dart';
@@ -8,7 +9,9 @@ import 'package:project_luana_v1/level_map_package/src/model/image_details.dart'
 import 'package:project_luana_v1/level_map_package/src/model/image_params.dart';
 import 'package:project_luana_v1/level_map_package/src/model/images_to_paint.dart';
 import 'package:project_luana_v1/level_map_package/src/model/level_map_params.dart';
-import 'package:project_luana_v1/level_map_package/src/utils/image_offset_extension.dart';
+
+
+import 'image_offset_extension.dart';
 
 final math.Random _random = math.Random();
 

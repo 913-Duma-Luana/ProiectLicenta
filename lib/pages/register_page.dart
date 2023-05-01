@@ -49,9 +49,6 @@ class _RegisterPageState extends State<RegisterPage> {
             'The passwords you provided do not match.\n'
             'Please reenter them and try again!');
       }
-
-
-
     } on FirebaseAuthException catch (error){
       // Eliminate the loading progress circle
       Navigator.pop(context);
@@ -106,7 +103,6 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
                   // Logo
                   const SizedBox(height: 10),
                   Container(
